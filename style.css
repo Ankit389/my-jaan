@@ -1,0 +1,366 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+.header {
+    text-align: center;
+    padding: 40px 0;
+    animation: fadeInDown 1s ease;
+}
+
+.main-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    margin-bottom: 10px;
+    animation: heartbeat 2s infinite;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #f8f9fa;
+    font-style: italic;
+}
+
+/* Navigation */
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    font-weight: 400;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Main Content */
+.main-content {
+    margin: 40px 0;
+}
+
+.hero-section {
+    text-align: center;
+    margin: 60px 0;
+    animation: fadeIn 1.5s ease;
+}
+
+.love-message h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.love-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.heart-animation {
+    font-size: 3rem;
+    animation: heartbeat 1.5s infinite;
+    display: inline-block;
+}
+
+.infinite-love {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ff6b6b;
+    text-align: center;
+    margin-top: 20px;
+    animation: glow 2s ease-in-out infinite alternate;
+    text-shadow: 0 0 10px rgba(255,107,107,0.5);
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px rgba(255,107,107,0.5);
+    }
+    to {
+        text-shadow: 0 0 20px rgba(255,107,107,0.8), 0 0 30px rgba(255,107,107,0.6);
+    }
+}
+
+/* Feature Cards */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 60px 0;
+}
+
+.feature-card {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: all 0.3s ease;
+    animation: fadeInUp 1s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    background: rgba(255,255,255,0.15);
+}
+
+.feature-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.feature-card p {
+    margin-bottom: 25px;
+    color: #f8f9fa;
+    line-height: 1.6;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(238,90,36,0.3);
+    background: linear-gradient(45deg, #ee5a24, #ff6b6b);
+}
+
+/* Love Counter */
+.love-counter {
+    text-align: center;
+    margin: 60px 0;
+    padding: 40px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.love-counter h3 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.counter-item {
+    display: inline-block;
+    margin: 0 30px;
+    text-align: center;
+}
+
+.counter-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ff6b6b;
+    margin-bottom: 10px;
+}
+
+.counter-label {
+    font-size: 1rem;
+    color: #f8f9fa;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 60px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    color: #f8f9fa;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Floating Hearts Background */
+.floating-hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.heart {
+    position: absolute;
+    color: rgba(255,255,255,0.3);
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.3;
+    }
+    90% {
+        opacity: 0.3;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 3rem;
+    }
+    
+    .love-message h2 {
+        font-size: 2rem;
+    }
+    
+    .navigation {
+        gap: 15px;
+    }
+    
+    .nav-link {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .counter-item {
+        margin: 0 15px;
+    }
+    
+    .counter-number {
+        font-size: 2rem;
+    }
+    
+    .features {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 2.5rem;
+    }
+    
+    .love-message h2 {
+        font-size: 1.8rem;
+    }
+    
+    .love-text {
+        font-size: 1rem;
+    }
+    
+    .navigation {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-link {
+        width: 200px;
+        text-align: center;
+    }
+}

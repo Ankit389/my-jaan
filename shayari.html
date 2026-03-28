@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💕 Love Shayari for Pihu 💕</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        .shayari-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .shayari-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .shayari-header h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+        
+        .shayari-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.8s ease;
+        }
+        
+        .shayari-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            background: rgba(255,255,255,0.15);
+        }
+        
+        .shayari-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #fff;
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        
+        .shayari-author {
+            text-align: right;
+            color: #f8f9fa;
+            font-size: 0.9rem;
+            font-weight: 300;
+        }
+        
+        .shayari-category {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: #fff;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+        }
+        
+        .share-buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .share-btn {
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: #fff;
+            padding: 8px 15px;
+            margin: 0 5px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .share-btn:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+        
+        .search-box {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .search-input {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 25px;
+            width: 300px;
+            font-size: 1rem;
+            outline: none;
+        }
+        
+        .search-input::placeholder {
+            color: rgba(255,255,255,0.7);
+        }
+        
+        .search-input:focus {
+            background: rgba(255,255,255,0.15);
+            border-color: #ff6b6b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="main-title">💕 Meri Pihu 💕</h1>
+            <p class="subtitle">Dil Ki Baatein, Shayari Ke Saath...</p>
+        </header>
+
+        <nav class="navigation">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="shayari.html" class="nav-link active">Love Shayari</a>
+            <a href="songs.html" class="nav-link">Romantic Songs</a>
+        </nav>
+
+        <div class="shayari-container">
+            <div class="shayari-header">
+                <h1>💝 Love Shayari for Pihu 💝</h1>
+                <p>Meri Pihu ke liye dil se nikali hui shayari</p>
+            </div>
+
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="Search shayari..." id="searchInput">
+            </div>
+
+            <div class="shayari-card">
+                <span class="shayari-category">Romantic</span>
+                <p class="shayari-text">
+                    Tumhare aankhon mein dekhu toh,<br>
+                    Duniya ki har khushi mil jaati hai,<br>
+                    Pihu tum ho meri jaan,<br>
+                    Tumhare bina ek pal bhi adhoora hai...
+                </p>
+                <p class="shayari-author">- Tumhare Ankit</p>
+                <div class="share-buttons">
+                    <button class="share-btn" onclick="copyShayari(this)">📋 Copy</button>
+                    <button class="share-btn" onclick="shareShayari(this)">💝 Share</button>
+                </div>
+            </div>
+
+            <div class="shayari-card">
+                <span class="shayari-category">Love</span>
+                <p class="shayari-text">
+                    Chandni raat mein tumhe yaad karte hain,<br>
+                    Har pal tumhare saath bitana chahte hain,<br>
+                    Pihu tum ho meri zindagi,<br>
+                    Tumse hi meri zindagi banati hai...
+                </p>
+                <p class="shayari-author">- Tumhare Ankit</p>
+                <div class="share-buttons">
+                    <button class="share-btn" onclick="copyShayari(this)">📋 Copy</button>
+                    <button class="share-btn" onclick="shareShayari(this)">💝 Share</button>
+                </div>
+            </div>
+
+            <div class="shayari-card">
+                <span class="shayari-category">Dil Ki Baat</span>
+                <p class="shayari-text">
+                    Dil dhadakta hai jab tumhare naam se,<br>
+                    Aankhein khilti hai tumhare khayalon se,<br>
+                    Pihu tum ho meri dhadkan,<br>
+                    Tumhare bina yeh dil kaise jeeye ga...
+                </p>
+                <p class="shayari-author">- Tumhare Ankit</p>
+                <div class="share-buttons">
+                    <button class="share-btn" onclick="copyShayari(this)">📋 Copy</button>
+                    <button class="share-btn" onclick="shareShayari(this)">💝 Share</button>
+                </div>
+            </div>
+
+            <div class="shayari-card">
+                <span class="shayari-category">Ishq</span>
+                <p class="shayari-text">
+                    Tumhare muskurahat se roshan hai meri duniya,<br>
+                    Tumhare aansuon se tadapta hai mera dil,<br>
+                    Pihu tum ho meri jaan,<br>
+                    Tumse hi meri zindagi ki har shururat hai...
+                </p>
+                <p class="shayari-author">- Tumhare Ankit</p>
+                <div class="share-buttons">
+                    <button class="share-btn" onclick="copyShayari(this)">📋 Copy</button>
+                    <button class="share-btn" onclick="shareShayari(this)">💝 Share</button>
+                </div>
+            </div>
+
+            <div class="shayari-card">
+                <span class="shayari-category">Mohabbat</span>
+                <p class="shayari-text">
+                    Har subah tumhare naam ki hoti hai,<br>
+                    Har shaam tumhare khayalon mein guzarti hai,<br>
+                    Pihu tum ho meri zindagi,<br>
+                    Tumhare bina yeh duniya bekaraar hai...
+                </p>
+                <p class="shayari-author">- Tumhare Ankit</p>
+                <div class="share-buttons">
+                    <button class="share-btn" onclick="copyShayari(this)">📋 Copy</button>
+                    <button class="share-btn" onclick="shareShayari(this)">💝 Share</button>
+                </div>
+            </div>
+
+            <div class="shayari-card">
+                <span class="shayari-category">Romantic</span>
+                <p class="shayari-text">
+                    Tumhare hatho mein mera hath ho,<br>
+                    Tumhare aankhon mein meri duniya ho,<br>
+                    Pihu tum ho meri zindagi,<br>
+                    Tumse hi meri har khushi hai...
+                </p>
+                <p class="shayari-author">- Tumhare Ankit</p>
+                <div class="share-buttons">
+                    <button class="share-btn" onclick="copyShayari(this)">📋 Copy</button>
+                    <button class="share-btn" onclick="shareShayari(this)">💝 Share</button>
+                </div>
+            </div>
+
+            <div class="shayari-card">
+                <span class="shayari-category">Dil Ki Dhadkan</span>
+                <p class="shayari-text">
+                    Dil ki dhadkan bhi tumhare naam se karti hai,<br>
+                    Saanson ki har baat tumhare baare mein karti hai,<br>
+                    Pihu tum ho meri jaan,<br>
+                    Tumhare bina yeh zindagi adhoori hai...
+                </p>
+                <p class="shayari-author">- Tumhare Ankit</p>
+                <div class="share-buttons">
+                    <button class="share-btn" onclick="copyShayari(this)">📋 Copy</button>
+                    <button class="share-btn" onclick="shareShayari(this)">💝 Share</button>
+                </div>
+            </div>
+
+            <div class="shayari-card">
+                <span class="shayari-category">Ishq Wala Love</span>
+                <p class="shayari-text">
+                    Tumhare chehre se chamakti hai meri duniya,<br>
+                    Tumhare awaaz se badhti hai meri dhadkan,<br>
+                    Pihu tum ho meri zindagi,<br>
+                    Tumse hi meri har raat banati hai...
+                </p>
+                <p class="shayari-author">- Tumhare Ankit</p>
+                <div class="share-buttons">
+                    <button class="share-btn" onclick="copyShayari(this)">📋 Copy</button>
+                    <button class="share-btn" onclick="shareShayari(this)">💝 Share</button>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>Made with ❤️ for Pihu | Tumhare Liye Hi Banaya Hai Ye Website</p>
+        </footer>
+    </div>
+
+    <script>
+        function copyShayari(button) {
+            const card = button.closest('.shayari-card');
+            const shayariText = card.querySelector('.shayari-text').innerText;
+            const authorText = card.querySelector('.shayari-author').innerText;
+            
+            const fullText = shayariText + '\n\n' + authorText;
+            
+            navigator.clipboard.writeText(fullText).then(() => {
+                button.textContent = '✅ Copied!';
+                setTimeout(() => {
+                    button.textContent = '📋 Copy';
+                }, 2000);
+            });
+        }
+
+        function shareShayari(button) {
+            const card = button.closest('.shayari-card');
+            const shayariText = card.querySelector('.shayari-text').innerText;
+            const authorText = card.querySelector('.shayari-author').innerText;
+            
+            const fullText = shayariText + '\n\n' + authorText;
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Love Shayari for Pihu',
+                    text: fullText
+                });
+            } else {
+                copyShayari(button);
+            }
+        }
+
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const shayariCards = document.querySelectorAll('.shayari-card');
+            
+            shayariCards.forEach(card => {
+                const shayariText = card.querySelector('.shayari-text').innerText.toLowerCase();
+                const category = card.querySelector('.shayari-category').innerText.toLowerCase();
+                
+                if (shayariText.includes(searchTerm) || category.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
