@@ -232,11 +232,60 @@ function handleMobileView() {
 window.addEventListener('resize', handleMobileView);
 handleMobileView();
 
+// Photo Gallery Functions
+function initPhotoGallery() {
+    const photoInput = document.getElementById('photoInput');
+    const galleryContainer = document.querySelector('.gallery-container');
+    
+    if (photoInput) {
+        photoInput.addEventListener('change', function(e) {
+            const files = Array.from(e.target.files);
+            const placeholders = document.querySelectorAll('.photo-placeholder');
+            
+            files.forEach((file, index) => {
+                if (index < placeholders.length && file.type.startsWith('image/')) {
+                    const reader = new FileReader();
+                    
+                    reader.onload = function(e) {
+                        const placeholder = placeholders[index];
+                        placeholder.innerHTML = `
+                            <img src="${e.target.result}" alt="Memory with Pihu" style="width: 100%; height: 100%; object-fit: cover; border-radius: 15px;">
+                            <div class="photo-overlay">
+                                <span class="photo-overlay-text">💕 Beautiful Memory 💕</span>
+                            </div>
+                        `;
+                        placeholder.classList.remove('photo-placeholder');
+                        placeholder.classList.add('photo-item');
+                    };
+                    
+                    reader.readAsDataURL(file);
+                }
+            });
+        });
+    }
+    
+    // Add click functionality to placeholders
+    document.querySelectorAll('.photo-placeholder').forEach(placeholder => {
+        placeholder.addEventListener('click', function() {
+            document.getElementById('photoInput').click();
+        });
+    });
+}
+
+// Add photo gallery initialization
+document.addEventListener('DOMContentLoaded', function() {
+    // ... existing code ...
+    
+    // Initialize photo gallery
+    initPhotoGallery();
+});
+
 // Export functions for use in other files
 window.LoveWebsite = {
     createFloatingHearts,
     showRandomLoveMessage,
     calculateLove,
     createLoveParticle,
-    getLoveGreeting
+    getLoveGreeting,
+    initPhotoGallery
 };
